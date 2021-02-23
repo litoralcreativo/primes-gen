@@ -37,3 +37,5 @@ function primesTo(max)
     return result;
 }
 ```
+
+aqui, el array ```javascript result[]``` aloja los numeros primos, y el array ```javascript store[]``` aloja los múltiplos de los primos
