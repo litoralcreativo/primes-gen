@@ -21,11 +21,18 @@ const searchNextPrime = (arr) => {
 };
 
 const getPrimes = async () => {
+  // deja de mostrar el contenido de la tabla
   clearContent();
+
+  // realiza una pequeña pausa intencional
   let a = new Promise((resolve) => setTimeout(resolve, 100));
   await a;
+
+  // acota a 5000 en caso de que el input se haya sobrepasado
   let value = document.getElementById("NumOfPrimes").value;
   if (value > 5000) value = 5000;
+
+  // busca los primos
   const p = primes(value);
   document.getElementById("table").className = "table-active";
   let tbody = document.getElementById("tbody");
@@ -35,6 +42,7 @@ const getPrimes = async () => {
     tbody.firstChild.remove();
   }
 
+  // crea un elemento DOM
   p.forEach((element, index) => {
     // crea un nuevo elemento
     let row = document.createElement("tr");
