@@ -13,7 +13,7 @@ devuelve
 
 
 ## CODIGO MEJORADO:
-**function primeFactorsTo(max)
+*function primeFactorsTo(max)
 {
     var store  = [], i, j, primes = [];
     for (i = 2; i <= max; ++i) 
@@ -28,4 +28,4 @@ devuelve
         }
     }
     return primes;
-}**
+}*
