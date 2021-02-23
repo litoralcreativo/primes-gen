@@ -17,18 +17,18 @@ devuelve
 ```javascript
 function primesTo(max)
 {
-    var store = [],primes = [];
+    var store = [], result = [];
     for (let i = 2; i <= max; ++i)
     {
         if (!store [i])
           {
-            primes.push(i);
+            result.push(i);
             for (let j = i << 1; j <= max; j += i)
             {
                 store[j] = true;
             }
         }
     }
-    return primes;
+    return result;
 }
 ```
