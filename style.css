@@ -1,0 +1,34 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#table-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+tbody {
+  text-align: center;
+}
+
+.table-disable {
+  opacity: 0%;
+}
+
+.table-active {
+  opacity: 100%;
+  transition: all 0.5s ease;
+}
+
+th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px;
+}
