@@ -10,28 +10,76 @@
   </head>
   <body>
     <div class="main">
-      <h1>Generador de numeros primos</h1>
-      <label for="NumOfPrimes">Nro. de primos:</label>
-      <input
-        type="number"
-        min="1"
-        max="5000"
-        value="10"
-        name="NumOfPrimes"
-        id="NumOfPrimes"
-      />
-      <button onclick="getPrimes()">search</button>
-      <button onclick="clearContent()">clear</button>
-      <div id="table-container">
-        <table id="table" class="table-disable">
-          <thead>
-            <tr>
-              <th>Index</th>
-              <th>Prime</th>
-            </tr>
-          </thead>
-          <tbody id="tbody"></tbody>
-        </table>
+      <h1 class="h1-title">Generador de numeros primos</h1>
+      <div class="buttons">
+        <button
+          onclick="
+            document.getElementById('left').style = 'display: block'
+            document.getElementById('right').style = 'display: none'
+          "
+        >
+          Número específico de primos
+        </button>
+
+        <button
+          onclick="
+            document.getElementById('right').style = 'display: block'
+            document.getElementById('left').style = 'display: none'
+            
+          "
+        >
+          Número acotado
+        </button>
+      </div>
+      <div class="rowContainer">
+        <div id="left" style="display: none">
+          <label for="NumOfPrimes">Nro. de primos:</label>
+          <input
+            type="number"
+            min="1"
+            max="5000"
+            value="10"
+            name="NumOfPrimes"
+            id="NumOfPrimes"
+          />
+          <button onclick="getPrimes()">search</button>
+          <button onclick="clearContent()">clear</button>
+          <div id="table-container">
+            <table id="table" class="table-disable">
+              <thead>
+                <tr>
+                  <th>Index</th>
+                  <th>Prime</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div id="right" style="display: none">
+          <label for="NumOfPrimes2">Maximo:</label>
+          <input
+            type="number"
+            min="1"
+            max="5000"
+            value="10"
+            name="NumOfPrimes2"
+            id="NumOfPrimes2"
+          />
+          <button onclick="getPrimes_other()">search</button>
+          <button onclick="clearContent()">clear</button>
+          <div id="table-container2">
+            <table id="table2" class="table-disable">
+              <thead>
+                <tr>
+                  <th>Index</th>
+                  <th>Prime</th>
+                </tr>
+              </thead>
+              <tbody id="tbody2"></tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </body>

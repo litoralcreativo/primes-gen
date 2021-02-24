@@ -5,7 +5,8 @@ body {
   align-items: center;
 }
 
-#table-container {
+#table-container,
+#table-container2 {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
@@ -25,10 +26,32 @@ tbody {
   transition: all 0.5s ease;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 th {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: white;
   padding: 10px;
+}
+
+.rowContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.rowContainer > div {
+  padding: 0px 20px;
+}
+
+.h1-title {
+  text-align: center;
 }
